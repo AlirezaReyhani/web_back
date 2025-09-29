@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color:rgb(<?php echo rand(0,255)?>,<?php echo rand(0,255)?>,<?php echo rand(0,255)?>);">
+<body style="background-color:GREY;">
     <?php 
     echo "host IP is : ",$_SERVER['REMOTE_ADDR'];?>
     <br>
@@ -16,10 +16,13 @@
     if(is_integer($name))
         echo "this is integer";
     else{
-    (integer)$name;
-    echo "converted to int";
+    $name=(integer)$name;
+    echo "converted to int",'<br>';
     }
+    $num=rand(0,1000000);
+    
 ?>
+<span style="color:<?=($num%2==0)?'red':'blue' ?>"><?= $num?></span>
 
 </body>
 </html>
