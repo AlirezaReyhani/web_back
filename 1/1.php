@@ -20,7 +20,10 @@
     echo "converted to int",'<br>';
     }
     $num=rand(0,1000000);
-    
+    if($num%2==0)
+        echo '<span style="color:darkred;">php</span>',$NUM;
+    else
+        echo '<span style="color:blue;">php</span>',$NUM;
 ?>
 <span style="color:<?=($num%2==0)?'red':'blue' ?>"><?= $num?></span>
 
